@@ -5,3 +5,8 @@ This plugin pre-renders react components from js or jsx files during the site ge
     <%- @react('./src/js/components/App.jsx') %>
 
 NOTE: path is relative to doc pads root path.
+
+
+# testing
+
+This may be of use: http://delarre.net/posts/unit-testing-docpad-plugins/
