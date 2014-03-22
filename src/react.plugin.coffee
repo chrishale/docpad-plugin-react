@@ -7,8 +7,10 @@ module.exports = (BasePlugin) ->
       name: 'react'
       renderBefore: ({templateData}, next) ->
          templateData.react = (name) ->
-            console.log docpad
-            component = require(path.resolve(docpad.instanceConfig.srcPath, name))
-            React.renderComponentToString(component()) || React.renderComponentToStaticMarkup(component())
+            component = require(path.resolve(docpad.config.srcPath, name))
+            if docpad.config.env == "test"
+               React.renderComponentToStaticMarkup(component())
+            else
+               React.renderComponentToString(component())
          next()
          @
