@@ -7,7 +7,7 @@ module.exports = function (BasePlugin) {
       name: 'react',
       renderBefore: function(_arg, next) {
          _arg.templateData.react = function(name) {
-         	var component = require(path.resolve(__dirname, '../../../src/', name));
+         	var component = require(path.resolve(__dirname, '../../../', name));
          	return React.renderComponentToString(component());
          };
          next();
