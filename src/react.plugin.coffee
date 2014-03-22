@@ -7,7 +7,8 @@ module.exports = (BasePlugin) ->
       name: 'react'
       renderBefore: ({templateData}, next) ->
          templateData.react = (name) ->
+            console.log docpad
             component = require(path.resolve(docpad.instanceConfig.srcPath, name))
-            React.renderComponentToStaticMarkup(component())
+            React.renderComponentToString(component()) || React.renderComponentToStaticMarkup(component())
          next()
          @
