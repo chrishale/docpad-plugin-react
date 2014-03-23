@@ -1,5 +1,7 @@
 # React Plugin for [DocPad](http://docpad.org)
 
+[![Build Status](https://secure.travis-ci.org/chrishale/docpad-plugin-react.png?branch=master)](http://travis-ci.org/chrishale/docpad-plugin-react "Check this project's build status on TravisCI")
+
 This plugin pre-renders React components from js or jsx files during the site generation.
 
     <%- @react('./files/components/App.jsx') %>
