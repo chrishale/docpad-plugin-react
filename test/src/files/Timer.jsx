@@ -3,6 +3,8 @@
  */
  
 var React = require('react');
+var svg = require('url?mimetype=image/svg+xml!./example.svg');
+var JSONdata = require('json!./example.json')
 
 // This could use JSX if we wanted; doesn't matter.
 var Timer = React.createClass({
@@ -21,6 +23,7 @@ var Timer = React.createClass({
   render: function() {
     return (
       <div>
+        <img src={svg} alt={JSONdata.name} />
         <input type="text" value="Edit" />
         Seconds Elapsed: {this.state.secondsElapsed}
       </div>
