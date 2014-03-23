@@ -1,12 +1,11 @@
 # React Plugin for [DocPad](http://docpad.org)
 
-This plugin pre-renders react components from js or jsx files during the site generation.
+This plugin pre-renders React components from js or jsx files during the site generation.
 
-    <%- @react('./src/js/components/App.jsx') %>
+    <%- @react('./files/components/App.jsx') %>
 
-NOTE: path is relative to doc pads root path.
+NOTE: path is relative to docpad's srcPath.
 
-
-# testing
-
-This may be of use: http://delarre.net/posts/unit-testing-docpad-plugins/
+## License
+Licensed under the incredibly [permissive](http://en.wikipedia.org/wiki/Permissive_free_software_licence) [MIT License](http://creativecommons.org/licenses/MIT/)
+<br/>Copyright &copy; 2014 Chris Hale
