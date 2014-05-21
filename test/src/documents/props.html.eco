@@ -1,0 +1,1 @@
+<%- @react('./files/App.js', { 'defaultText': 'Edit me!' }) %>

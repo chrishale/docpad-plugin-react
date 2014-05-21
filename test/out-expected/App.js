@@ -17,7 +17,7 @@ var Timer = React.createClass({
   render: function() {
     return React.DOM.div(
       {},
-      React.DOM.input({type: 'text', defaultValue: 'Edit me!'}),
+      React.DOM.input({type: 'text', defaultValue: this.props.defaultText}),
       'Seconds Elapsed: ', this.state.secondsElapsed
     );
   }

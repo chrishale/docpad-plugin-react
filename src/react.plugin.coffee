@@ -6,11 +6,11 @@ module.exports = (BasePlugin) ->
    class ReactPlugin extends BasePlugin
       name: 'react'
       renderBefore: ({templateData}, next) ->
-         templateData.react = (name) ->
+         templateData.react = (name, props = {}) ->
             component = _require("jsx-loader!" + path.resolve(docpad.config.srcPath, name).toString())
             if docpad.config.env == "test"
-               React.renderComponentToStaticMarkup(component())
+               React.renderComponentToStaticMarkup(component(props))
             else
-               React.renderComponentToString(component())
+               React.renderComponentToString(component(props))
          next()
          @
